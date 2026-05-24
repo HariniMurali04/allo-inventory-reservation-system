@@ -92,11 +92,11 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-100 via-blue-50 to-pink-100 p-8">
+    <main className="min-h-screen bg-gray-100 p-8">
 
       <div className="max-w-5xl mx-auto">
 
-        <h1 className="text-5xl font-extrabold mb-10 text-center text-slate-800">
+        <h1 className="text-4xl font-bold mb-8 text-center">
           Allo Inventory Reservation
         </h1>
 
@@ -106,10 +106,10 @@ export default function HomePage() {
 
             <div
               key={product.id}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6 border border-white"
+              className="bg-white rounded-xl shadow p-6"
             >
 
-              <h2 className="text-2xl font-bold mb-5 text-slate-700">
+              <h2 className="text-2xl font-semibold mb-4">
                 {product.name}
               </h2>
 
@@ -119,20 +119,26 @@ export default function HomePage() {
                   (warehouse) => (
 
                     <div
-                      key={warehouse.warehouseId}
-                      className="bg-gradient-to-r from-blue-50 to-purple-50 border border-purple-100 rounded-xl p-4 flex items-center justify-between"
+                      key={
+                        warehouse.warehouseId
+                      }
+                      className="border rounded-lg p-4 flex items-center justify-between"
                     >
 
                       <div>
 
-                        <p className="font-semibold text-slate-700">
-                          {warehouse.warehouseName}
+                        <p className="font-medium">
+                          {
+                            warehouse.warehouseName
+                          }
                         </p>
 
-                        <p className="text-sm text-slate-500 mt-1">
+                        <p className="text-sm text-gray-500 mt-1">
                           Available Stock:
                           {" "}
-                          {warehouse.availableStock}
+                          {
+                            warehouse.availableStock
+                          }
                         </p>
 
                       </div>
@@ -148,11 +154,9 @@ export default function HomePage() {
                           loading ||
                           warehouse.availableStock <= 0
                         }
-                        className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-5 py-2 rounded-xl shadow-md transition-all duration-200 disabled:opacity-50"
+                        className="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg disabled:bg-gray-400"
                       >
-                        {loading
-                          ? "Reserving..."
-                          : "Reserve"}
+                        Reserve
                       </button>
 
                     </div>

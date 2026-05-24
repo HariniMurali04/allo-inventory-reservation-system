@@ -1,0 +1,5 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("postgresql://postgres.wmphplznnpzquhubkwxy:?fkj@g3xvYSdLv#@aws-1-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true")
+  directUrl = env("postgresql://postgres.wmphplznnpzquhubkwxy:?fkj@g3xvYSdLv#@aws-1-ap-south-1.pooler.supabase.com:5432/postgres")
+}
