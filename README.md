@@ -105,49 +105,8 @@ Inside the transaction:
 
 This ensures only one request can reserve the last available unit.
 
+```md
 If stock is unavailable, the API returns:
 
 ```http
 409 Conflict
-
-git add .
-git commit -m "Complete README and final project polish"
-git push
-
-Local Setup
-1. Clone Repository
-
-2. Install Dependencies
-npm install
-3. Configure Environment Variables
-
-Create:
-
-.env
-
-Add:
-
-DATABASE_URL=YOUR_SUPABASE_POOLING_URL
-DIRECT_URL=YOUR_SUPABASE_DIRECT_URL
-4. Run Prisma Migration
-npx prisma migrate dev
-5. Generate Prisma Client
-npx prisma generate
-6. Seed Database
-npm run seed
-7. Start Development Server
-npm run dev
-
-Open:
-
-http://localhost:3000
-
-Deployment
-
-Frontend deployed on:
-
-Vercel
-
-Database hosted on:
-
-Supabase PostgreSQL
