@@ -110,3 +110,20 @@ If stock is unavailable, the API returns:
 
 ```http
 409 Conflict
+
+## How It Works
+
+1. User selects a product
+2. System checks available stock
+3. Inventory is temporarily reserved
+4. User completes payment
+5. Reservation is confirmed or auto-released after expiry
+
+##System Design Insight
+
+This system prevents overselling using:
+- Database transactions (Prisma)
+- Atomic inventory updates
+- Reservation expiry logic
+
+Ensures consistency under high traffic and concurrent users.
