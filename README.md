@@ -102,8 +102,7 @@ Reservation statuses:
 ### 🧩 Race Condition Demo
 ![Race Condition Demo](./public/Screenshots/race-condition-demo.png)
 
-### 📉 Reduced Stock
-![Reduced Stock](./public/Screenshots/reduced-stock.png)
+
 
 
 # API Endpoints
